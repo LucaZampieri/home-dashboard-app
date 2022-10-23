@@ -21,7 +21,8 @@ app = Dash(__name__)
 # layout_col_3 = []
 app.layout = html.Div(
     children=[
-        html.H1(children="Hello Dash"),
+        html.H1(children="Good Morning Lovelies"),
+        html.Time(),
         html.Div(
             children="""
         Dash: A web application framework for your data.
@@ -29,6 +30,7 @@ app.layout = html.Div(
         ),
         html.Div(
             children=[
+                html.H3(children="Weather"),
                 dcc.Graph(
                     # id="example-graph-5",
                     figure=create_figure(),
@@ -44,6 +46,9 @@ app.layout = html.Div(
         ),
         html.Div(
             children=[
+                html.H3(children="Finance"),
+            ]
+            + [
                 dcc.Graph(
                     # id="example-graph-6",
                     figure=create_yfinance_figure(row),
@@ -58,6 +63,7 @@ app.layout = html.Div(
         ),
         html.Div(
             children=[
+                html.H3(children="X"),
                 dcc.Graph(
                     # id="example-graph-",
                     figure=create_figure(),
